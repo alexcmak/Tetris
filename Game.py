@@ -71,8 +71,6 @@ class Game:
 				return False
 		return True
 
-
-
 	def rotate(self):
 		self.current_block.rotate()
 		if self.block_inside() == False or self.block_fits() == False:
@@ -87,8 +85,9 @@ class Game:
 
 
 	def draw(self, screen):
-		self.grid.draw(screen)
-		self.current_block.draw(screen, 11, 11) # shifted for scoreboard
+		offset = 11
+		self.grid.draw(screen, offset)
+		self.current_block.draw(screen, offset, offset) # shifted for scoreboard
 
 		# draw to the Next Block
 		if self.next_block.id == 3:

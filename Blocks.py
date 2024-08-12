@@ -1,5 +1,6 @@
 from Block import Block
 from Position import Position
+from Colors import Colors
 
 # L Block has 4 occupied blocks and is contained in a 3x3 box
 #                  this is state 0
@@ -15,6 +16,7 @@ class LBlock(Block):
 			2: [Position(1, 0), Position(1, 1), Position(1, 2), Position(2, 0)],
 			3: [Position(0, 0), Position(0, 1), Position(1, 1), Position(2, 1)]
 		}
+		self.color = Colors.green
 		self.move(0,3) # so always appear in top middle
 
 
@@ -38,6 +40,7 @@ class JBlock(Block):
 			2: [Position(1, 0), Position(1, 1), Position(1, 2), Position(2, 2)],
 			3: [Position(0, 1), Position(1, 1), Position(2, 0), Position(2, 1)]
 		}
+		self.color = Colors.red
 		self.move(0,3)
 
 # I Block has 4 occupied blocks and is contained in a 4x4 box
@@ -56,6 +59,7 @@ class IBlock(Block):
 			2: [Position(2, 0), Position(2, 1), Position(2, 2), Position(2, 3)],
 			3: [Position(0, 1), Position(1, 1), Position(2, 1), Position(3, 1)]
 		}
+		self.color = Colors.orange
 		self.move(-1,3) # so always appear in top middle
 
 # O Block has 4 occupied blocks and is contained in a 2x2 box
@@ -68,6 +72,7 @@ class OBlock(Block):
 			2: [Position(0, 0), Position(0, 1), Position(1, 0), Position(1, 1)],
 			3: [Position(0, 0), Position(0, 1), Position(1, 0), Position(1, 1)]
         }
+		self.color = Colors.yellow
 		self.move(0,4)
   
 # S Block has 4 occupied blocks and is contained in a 3x3 box
@@ -85,6 +90,7 @@ class SBlock(Block):
 			2: [Position(1, 1), Position(1, 2), Position(2, 0), Position(2, 1)],
 			3: [Position(0, 0), Position(1, 0), Position(1, 1), Position(2, 1)]
 		}
+		self.color = Colors.purple
 		self.move(0,3)
 
 # T Block has 4 occupied blocks and is contained in a 3x3 box
@@ -102,6 +108,7 @@ class TBlock(Block):
 			2: [Position(1, 0), Position(1, 1), Position(1, 2), Position(2, 1)],
 			3: [Position(0, 1), Position(1, 0), Position(1, 1), Position(2, 1)]
 		}
+		self.color = Colors.cyan
 		self.move(0,3)
 
 # Z Block has 4 occupied blocks and is contained in a 3x3 box
@@ -118,4 +125,5 @@ class ZBlock(Block):
 			2: [Position(1, 0), Position(1, 1), Position(2, 1), Position(2, 2)],
 			3: [Position(0, 1), Position(1, 0), Position(1, 1), Position(2, 0)]
 		}
+		self.color = Colors.blue
 		self.move(0,3)

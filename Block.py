@@ -10,7 +10,7 @@ class Block:
 		self.row_offset = 0
 		self.column_offset = 0
 		self.rotation_state = 0
-		self.colors = Colors.get_cell_colors()
+		self.color = Colors.dark_grey
 		
 	
 	def move (self, rows, columns):
@@ -40,5 +40,6 @@ class Block:
 		for tile in tiles:
 			tile_rect = pygame.Rect(offset_x + tile.column * self.cell_size, 
 				offset_y + tile.row * self.cell_size, self.cell_size -1, self.cell_size -1)
-			pygame.draw.rect(screen, self.colors[self.id], tile_rect)
+			pygame.draw.rect(screen, self.color, tile_rect)
+
 

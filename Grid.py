@@ -58,9 +58,7 @@ class Grid:
 			for column in range(self.num_cols):
 				self.grid[row][column] = 0
 
-	def draw(self, screen):
-
-		offset = 10 # score board
+	def draw(self, screen, offset):
 		for row in range(self.num_rows):
 			for column in range(self.num_cols):
 				cell_value = self.grid[row][column]
