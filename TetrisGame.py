@@ -24,9 +24,7 @@ pygame.display.set_caption("Python Tetris Clone")
 
 clock = pygame.time.Clock()
 
-game = Game()
-
-game_grid = Grid()
+game = Game(20, 10)
 
 GAME_UPDATE = pygame.USEREVENT
 pygame.time.set_timer(GAME_UPDATE, 250)  # n miliseconds

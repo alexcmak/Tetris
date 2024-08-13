@@ -2,12 +2,12 @@ import pygame
 from Colors import Colors
 
 class Grid:
-	def __init__(self):
-		self.num_rows = 20
-		self.num_cols = 10
+	def __init__(self, rows, cols):
+		self.num_rows = rows
+		self.num_cols = cols
 		self.cell_size = 30
 		self.grid = [[0 for j in range(self.num_cols)] for i in range(self.num_rows)]
-		self.colors = Colors.get_cell_colors()  # blocks 
+		self.colors = Colors.get_cell_colors()
 
 
 	def print_grid(self):
