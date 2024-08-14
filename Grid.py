@@ -58,12 +58,15 @@ class Grid:
 			for column in range(self.num_cols):
 				self.grid[row][column] = 0
 
-	def draw(self, screen, offset):
+	def draw(self, screen, offset, game_over):
 		for row in range(self.num_rows):
 			for column in range(self.num_cols):
 				cell_value = self.grid[row][column]
 
-				cell_rect = pygame.Rect(column*self.cell_size + offset + 1, row*self.cell_size + offset + 1,
-				self.cell_size -1, self.cell_size -1)
-				pygame.draw.rect(screen, self.colors[cell_value], cell_rect)
+				cell_rect = pygame.Rect(column*self.cell_size + offset + 1, row*self.cell_size + offset + 1, self.cell_size -1, self.cell_size -1)
+
+				if game_over and cell_value != 0:
+					pygame.draw.rect(screen, Colors.light_grey, cell_rect)
+				else:
+					pygame.draw.rect(screen, self.colors[cell_value], cell_rect)
 

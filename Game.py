@@ -84,9 +84,9 @@ class Game:
 		return True
 
 
-	def draw(self, screen):
+	def draw(self, screen, game_over):
 		offset = 11
-		self.grid.draw(screen, offset)
+		self.grid.draw(screen, offset, game_over)
 		self.current_block.draw(screen, offset, offset) # shifted for scoreboard
 
 		# draw to the Next Block

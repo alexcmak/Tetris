@@ -77,7 +77,7 @@ def main():
 			screen.blit(score_value_surface, score_value_surface.get_rect(centerx = score_rect.centerx, 
 			centery = score_rect.centery))
 			pygame.draw.rect(screen, Colors.light_blue, next_rect, 0, 10)
-			game.draw(screen)
+			game.draw(screen, game.game_over)
 
 
 			pygame.display.update()
