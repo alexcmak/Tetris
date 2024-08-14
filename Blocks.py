@@ -17,7 +17,7 @@ class LBlock(Block):
 			3: [Position(0, 0), Position(0, 1), Position(1, 1), Position(2, 1)]
 		}
 		self.color = Colors.green
-		self.move(0,3) # so always appear in top middle
+		self.width = 3
 
 
 # J Block has 4 occupied blocks and is contained in a 3x3 box
@@ -41,7 +41,7 @@ class JBlock(Block):
 			3: [Position(0, 1), Position(1, 1), Position(2, 0), Position(2, 1)]
 		}
 		self.color = Colors.red
-		self.move(0,3)
+		self.width = 3
 
 # I Block has 4 occupied blocks and is contained in a 4x4 box
 #                  this is state 0
@@ -60,7 +60,7 @@ class IBlock(Block):
 			3: [Position(0, 1), Position(1, 1), Position(2, 1), Position(3, 1)]
 		}
 		self.color = Colors.orange
-		self.move(-1,3) # so always appear in top middle
+		self.width = 4
 
 # O Block has 4 occupied blocks and is contained in a 2x2 box
 class OBlock(Block):
@@ -73,7 +73,7 @@ class OBlock(Block):
 			3: [Position(0, 0), Position(0, 1), Position(1, 0), Position(1, 1)]
         }
 		self.color = Colors.yellow
-		self.move(0,4)
+		self.width = 2
   
 # S Block has 4 occupied blocks and is contained in a 3x3 box
 #                  this is state 0
@@ -91,7 +91,7 @@ class SBlock(Block):
 			3: [Position(0, 0), Position(1, 0), Position(1, 1), Position(2, 1)]
 		}
 		self.color = Colors.purple
-		self.move(0,3)
+		self.width = 3
 
 # T Block has 4 occupied blocks and is contained in a 3x3 box
 #                  this is state 0
@@ -109,7 +109,7 @@ class TBlock(Block):
 			3: [Position(0, 1), Position(1, 0), Position(1, 1), Position(2, 1)]
 		}
 		self.color = Colors.cyan
-		self.move(0,3)
+		self.width = 3
 
 # Z Block has 4 occupied blocks and is contained in a 3x3 box
 #                  this is state 0
@@ -126,4 +126,4 @@ class ZBlock(Block):
 			3: [Position(0, 1), Position(1, 0), Position(1, 1), Position(2, 0)]
 		}
 		self.color = Colors.blue
-		self.move(0,3)
+		self.width = 3

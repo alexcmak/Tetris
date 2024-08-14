@@ -5,12 +5,14 @@ import pygame
 
 class Game:
 	def __init__(self, rows, cols):
+		self.Cols = cols
 		self.grid = Grid(rows,cols)
 		self.blocks = [ IBlock(), JBlock(), LBlock(), OBlock(), SBlock(), ZBlock()]
 		self.current_block = self.get_random_block()
 		self.next_block = self.get_random_block()
 		self.game_over = False
 		self.score = 0
+	
 
 	def update_score(self, lines_cleared, move_down_points):
 		if lines_cleared == 1:
@@ -26,6 +28,11 @@ class Game:
 			self.blocks = [ IBlock(), JBlock(), LBlock(), OBlock(), SBlock(), ZBlock()]
 
 		block = random.choice(self.blocks)
+
+		# center based on width and cols
+		block.center(self.Cols)
+		
+
 		self.blocks.remove(block)
 		return block
 	

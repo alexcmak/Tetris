@@ -11,8 +11,20 @@ class Block:
 		self.column_offset = 0
 		self.rotation_state = 0
 		self.color = Colors.dark_grey
-		
+		self.width = 0
 	
+	# based on size of block determine how many moves to start in the center of columns
+	def center(self, cols):
+		move_over = cols // self.width
+
+		if self.width == 2:
+			self.move(0, move_over - 1)
+		elif self.width == 4:
+			self.move(-1, move_over + 1)
+		else:
+			self.move(0, move_over)
+
+
 	def move (self, rows, columns):
 		self.row_offset += rows
 		self.column_offset += columns
