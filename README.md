@@ -19,6 +19,6 @@ I plan on adding a few things to the game.
 ## Screenshots
 
 
-![screenshot](https://github.com/alexcmak/tetris/blob/master/screenshot1.png)
+![screenshot](https://github.com/alexcmak/tetris/blob/main/screenshot1.png)
 
-![screenshot](https://github.com/alexcmak/tetris/blob/master/screenshot2.png)
+![screenshot](https://github.com/alexcmak/tetris/blob/main/screenshot2.png)
