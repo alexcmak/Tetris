@@ -14,13 +14,14 @@ title_font = pygame.font.Font(None, 40) # default font
 score_surface = title_font.render("Score", True, Colors.white)
 next_surface = title_font.render("Next", True, Colors.white)
 game_over_surface = title_font.render("Game Over", True, Colors.white)
-
+icon = pygame.image.load('tetris.png')
 
 score_rect = pygame.Rect(320, 55, 170, 60)
 next_rect = pygame.Rect(320, 215, 170, 180)
 
 screen = pygame.display.set_mode((500, 620))
-pygame.display.set_caption("Python Tetris Clone")
+pygame.display.set_caption("Python Tetris Clone - Alex Mak")
+pygame.display.set_icon(icon)
 
 clock = pygame.time.Clock()
 
@@ -32,6 +33,11 @@ pygame.time.set_timer(GAME_UPDATE, 250)  # n miliseconds
 def main():
 
 	paused = False
+
+	print ("'N' for new game")
+	print ("'P' for pause")
+	print ("'\u2191' to rotate")
+	print ("<spacebar> to drop")
 
 	while True:
 		for event in pygame.event.get():
