@@ -49,15 +49,17 @@ def main():
 
 
 				if not paused:
-					if event.key == pygame.K_LEFT  and game.game_over == False:
-						game.move_left()
-					if event.key == pygame.K_RIGHT  and game.game_over == False:
-						game.move_right()
-					if event.key == pygame.K_DOWN  and game.game_over == False:
-						game.move_down()
-						game.update_score(0, 1)
-					if event.key == pygame.K_UP  and game.game_over == False:
-						game.rotate()
+
+					if game.game_over == False:
+						if event.key == pygame.K_LEFT:
+							game.move_left()
+						if event.key == pygame.K_RIGHT:
+							game.move_right()
+						if event.key == pygame.K_DOWN:
+							game.move_down()
+							game.update_score(0, 1)
+						if event.key == pygame.K_UP:
+							game.rotate()
 			
 			if event.type == GAME_UPDATE and game.game_over == False and not paused:
 				game.move_down()
