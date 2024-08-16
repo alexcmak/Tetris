@@ -51,11 +51,18 @@ class Game:
 		if self.block_inside() == False or self.block_fits() == False:
 			self.current_block.move(-1, 0)
 			self.lock_block()
+			return True
+		return False
+
+	def drop(self):
+		while self.block_fits():
+			if self.move_down() == True:
+				break
+		
 
 	def lock_block(self):
 		tiles = self.current_block.get_cell_positions()
 		for position in tiles:
-			# print(position)
 			self.grid.grid[position.row][position.column] = self.current_block.id
 		self.current_block = self.next_block
 		self.next_block = self.get_random_block()

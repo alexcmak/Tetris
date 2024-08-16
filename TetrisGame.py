@@ -60,6 +60,8 @@ def main():
 							game.update_score(0, 1)
 						if event.key == pygame.K_UP:
 							game.rotate()
+						if event.key == pygame.K_SPACE:
+							game.drop()
 			
 			if event.type == GAME_UPDATE and game.game_over == False and not paused:
 				game.move_down()
