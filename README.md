@@ -5,6 +5,7 @@ This is a Tetris clone written in python based on an excellent tutorial by Nick 
 You will need to have *pygame* on your computer. [Follow this guide.](https://www.pygame.org/wiki/GettingStarted)
 
 
+python is tricky on the iMac, this [link](https://hackernoon.com/fixing-the-externally-managed-environment-error-when-using-pip-a-quick-guide) helped me.
 
 
 I plan on adding a few things to the game.
