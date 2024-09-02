@@ -5,11 +5,17 @@ This is a Tetris clone written in python based on an excellent tutorial by Nick 
 ## pygame
 You will need to have *pygame* on your computer. [Follow this guide.](https://www.pygame.org/wiki/GettingStarted)
 
+## PC
+You should have little to no problems installing pygame on a pc.
+
+```
+pip install pygame
+```
 
 ### Mac
 python is tricky on the iMac, this [link](https://hackernoon.com/fixing-the-externally-managed-environment-error-when-using-pip-a-quick-guide) helped me.
 
-pygame will not be installed as easily as you would like. To successfully do so you will need an "venv", activate it then you can use pip3.
+pygame will not be installed as easily as you would like. To successfully do so you will need an "venv", activate it then you can use **pip**.
 
 After you have all my source code, use the Terminal and cd to the folder; you will need to do the following:
 
